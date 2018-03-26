@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata"><actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides><actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides><actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides><actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides><actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides><actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides><actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides><actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides><actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides><actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides><actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides><fields>
+        <fullName>Assignee__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Who is assigned to the time log</inlineHelpText>
+        <label>Assignee</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields><fields>
+        <fullName>Due_Date_Label__c</fullName>
+        <description>YYYY-MM-DD format; to be transposed to true date in Salesforce</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the Due Date at the point this Time Log record was exported from Everhour</inlineHelpText>
+        <label>Due Date Label</label>
+        <length>12</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields><fields>
+        <fullName>External_ID_Time_Log__c</fullName>
+        <externalId>true</externalId>
+        <label>External ID (Time Log)</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields><fields>
+        <fullName>External_Project_ID__c</fullName>
+        <description>Used by Asana, to create lookup to relevant SF Projects</description>
+        <externalId>false</externalId>
+        <label>External Project ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields><fields>
+        <fullName>External_Project_Label__c</fullName>
+        <description>Project name in external PM service</description>
+        <externalId>false</externalId>
+        <label>External Project Label</label>
+        <length>120</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields><fields>
+        <fullName>External_Task_Label__c</fullName>
+        <description>As set in the external time logging or task management service. Hidden.</description>
+        <externalId>false</externalId>
+        <label>External Task Label</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields><fields>
+        <fullName>Project_Task__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Task</label>
+        <referenceTo>Project_Task__c</referenceTo>
+        <relationshipLabel>Time Logs</relationshipLabel>
+        <relationshipName>Time_Logs</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields><fields>
+        <fullName>Task_Section_Label__c</fullName>
+        <description>As set in external PM service</description>
+        <externalId>false</externalId>
+        <label>Task Section Label</label>
+        <length>120</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields><fields>
+        <fullName>Task_URL__c</fullName>
+        <description>Raw Asana URL, from which we get Project and Task IDs
+To Hide</description>
+        <externalId>false</externalId>
+        <label>Task URL</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields><fields>
+        <fullName>Time_Log_Comments__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Entered in external time logging service</inlineHelpText>
+        <label>Time Log Comments</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields><fields>
+        <fullName>Time_Log_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Time Log Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields><fields>
+        <fullName>Time_Log_Day__c</fullName>
+        <description>YYYY-MM-DD format from Everhour
+Expect to be hidden and transposed in SF</description>
+        <externalId>false</externalId>
+        <label>Time Log Day</label>
+        <length>12</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields><fields>
+        <fullName>Time_Sheet__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Time Sheet</label>
+        <referenceTo>Time_Sheet__c</referenceTo>
+        <relationshipLabel>Time Logs</relationshipLabel>
+        <relationshipName>Time_Logs</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields><fields>
+        <fullName>Time_decimal__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>As recorded by per time log</inlineHelpText>
+        <label>Time (decimal)</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields><fields>
+        <fullName>Workspace__c</fullName>
+        <description>Use the Everhour terminology of a Project Team in Asana, a workspace in Jira etc</description>
+        <externalId>false</externalId>
+        <label>Workspace</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields><allowInChatterGroups>false</allowInChatterGroups><compactLayoutAssignment>SYSTEM</compactLayoutAssignment><deploymentStatus>Deployed</deploymentStatus><enableActivities>true</enableActivities><enableBulkApi>true</enableBulkApi><enableFeeds>false</enableFeeds><enableHistory>true</enableHistory><enableReports>false</enableReports><enableSearch>true</enableSearch><enableSharing>true</enableSharing><enableStreamingApi>true</enableStreamingApi><label>Time Log</label><nameField>
+        <displayFormat>TL-{0000}</displayFormat>
+        <label>Time Log Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField><pluralLabel>Time Logs</pluralLabel><searchLayouts /><sharingModel>ControlledByParent</sharingModel><listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>OBJECT_ID</columns>
+        <columns>Time_decimal__c</columns>
+        <columns>Time_Log_Date__c</columns>
+        <columns>Time_Log_Day__c</columns>
+        <columns>Time_Sheet__c</columns>
+        <columns>Due_Date_Label__c</columns>
+        <columns>External_Task_Label__c</columns>
+        <columns>External_Project_Label__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews></CustomObject>
